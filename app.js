@@ -16,8 +16,12 @@ var commentRoutes = require("./paths/comments"),
 	routeRoutes   = require("./paths/routes"),
 	indexRoutes 	  = require("./paths/index");
 
+//Local host DB:
+// mongoose.connect("mongodb://localhost:27017/moto_adv", {useNewUrlParser: true, useUnifiedTopology: true});
 
-mongoose.connect("mongodb://localhost:27017/moto_adv", {useNewUrlParser: true, useUnifiedTopology: true});
+// //MongoLabDB:
+mongoose.connect("mongodb+srv://fkomogorov:Simona1234@cluster0-xlvsu.mongodb.net/test?retryWrites=true&w=majority");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
