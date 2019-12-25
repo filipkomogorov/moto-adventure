@@ -20,7 +20,7 @@ var commentRoutes = require("./paths/comments"),
 // mongoose.connect("mongodb://localhost:27017/moto_adv", {useNewUrlParser: true, useUnifiedTopology: true});
 
 // //MongoLabDB:
-mongoose.connect("mongodb+srv://fkomogorov:Simona1234@cluster0-xlvsu.mongodb.net/test?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://fkomogorov:Simona1234@cluster0-xlvsu.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
